@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="https://www.thymeleaf.com">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OnlineBankManagement | CNBank</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800&display=swap');
+ 
+        *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+.showcase{
+ 
+    width: 100%;
+    height: 100vh;
+    padding-top: 70px;
+}
+.showcase #navbar{
+    width: 100%;
+    background: #cfcfcf;
+    padding: 25px 95px;
+    align-items: center;
+    margin: 0 auto;
+    display: flex;
+    position: fixed;
+    top: 0;
+    justify-content: space-between;
+    overflow: hidden;
+}
+ 
+.showcase #navbar .brand-left{
+    color: #160283;
+    font-size: 20px;
+    font-weight: 700;
+    text-decoration: none;
+    transition: all 0.5s ease;
+}
+ 
+.showcase #navbar .brand-left:hover{
+    color: #f7f5f5;
+}
+.showcase #navbar .menu{
+    display: flex;
+    list-style: none;
+    font-size: 14px;
+    font-weight: 600;
+}
+ 
+.showcase #navbar .menu a{
+    text-decoration: none;
+    display: inline-block;
+    padding: 0 20px;
+    color: #0a0a0a;
+    transition: all 0.5s ease;
+}
+.showcase #navbar .menu a:hover{
+    color: #f1f1f3;
+}
+.showcase .showcase-content{
+    max-width: 850px;
+    margin-top: 0;
+    padding: 0 95px;
+}
+.showcase .showcase-content h3{
+    color:  #160283;
+    font-size: 60px;
+    margin: 15px 0;
+}
+.showcase .showcase-content span{
+    color: #f9f6f6;
+    font-family: 'Verdana', sans-serif;
+    font-weight: 500;
+}
+.showcase .showcase-content p{
+    color: #fefafa;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    text-align: justify;
+}
+   .showcase{
+    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('/images/Background_final.png') no-repeat center center/cover;
+    width: 100%;
+    height: 100vh;
+}
+#footer{
+   background-color: #160283;
+   color: #fff;
+   font-family: 'Verdana', sans-serif;
+   font-weight: 500;
+   margin-top: 180px;
+}
+ 
+ 
+    </style>
+</head>
+ 
+<body id="home">
+   <div class="showcase">
+ 
+       <nav id="navbar">
+            <a href="/" class="brand-left">CNBank</a>
+            <ul class="menu">
+                <li class="listitem"><a href="/">Home</a></li>
+                <li class="listitem"><a href="/aboutus">About Us</a></li>
+                <li class="listitem"><a href="/contact">Contact</a></li>
+                <li class="listitem"><a href="/login">Login</a></li>
+                <li class="listitem"><a href="/signup">Sign Up</a></li>
+            </ul>
+       </nav>
+ 
+       <div class="showcase-content">
+        <h3>About <span>Us</span></h3>
+        <p>CNBank, a Fortune 500 company, is a Multinational, Public Sector Banking and Financial services statutory body. The rich heritage and legacy of CNBank accredits it as a trusted Bank by its customers through generations. CNBank, with a significant market share, serves a vast number of customers through its extensive network of branches, ATMs/ADWMs, and BC outlets. With an undeterred focus on innovation and customer centricity, which stems from the core values of the Bank - Service, Transparency, Ethics, Politeness and Sustainability, CNBank continues to serve its customers effectively.
+        </p>
+        </div>
+            <div id="footer">
+                <marquee behavior="scroll" direction="left">
+                    Thank you for visiting us. If not registered please sign up with us for availing the benefits. Have a nice day.
+                </marquee>
+            </div>
+            </div>

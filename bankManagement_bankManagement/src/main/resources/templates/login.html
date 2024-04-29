@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="https://www.thymeleaf.com">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>OnlineBankManagement | CNBank</title>
+<style>
+@import
+	url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800&display=swap')
+	;
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: 'Poppins', sans-serif;
+}
+
+.showcase {
+	width: 100%;
+	height: 100vh;
+	padding-top: 70px;
+	background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+		url('/images/bg_final1.png') no-repeat center center/cover;
+	width: 100%;
+	height: 100vh;
+}
+
+.showcase #navbar {
+	width: 100%;
+	background: #cfcfcf;
+	padding: 25px 95px;
+	align-items: center;
+	margin: 0 auto;
+	display: flex;
+	position: fixed;
+	top: 0;
+	justify-content: space-between;
+	overflow: hidden;
+}
+
+.showcase #navbar .brand-left {
+	color: #160283;
+	font-size: 20px;
+	font-weight: 700;
+	text-decoration: none;
+	transition: all 0.5s ease;
+}
+
+.showcase #navbar .brand-left:hover {
+	color: #f7f5f5;
+}
+
+.showcase #navbar .menu {
+	display: flex;
+	list-style: none;
+	font-size: 14px;
+	font-weight: 600;
+}
+
+.showcase #navbar .menu a {
+	text-decoration: none;
+	display: inline-block;
+	padding: 0 20px;
+	color: #0a0a0a;
+	transition: all 0.5s ease;
+}
+
+.showcase #navbar .menu a:hover {
+	color: #f1f1f3;
+}
+
+.showcase h3 {
+	color: #160283;
+	font-size: 60px;
+	margin: 15px 0;
+	text-align: center;
+}
+
+.input-block {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: center;
+	margin: 20px auto;
+	height: auto;
+	width: 300px;
+	border: 2px solid #160283;
+	padding: 20px;
+	border-radius: 10px;
+	background-color: #fff;
+}
+
+.input-label {
+	margin-bottom: 10px;
+	font-size: 16px;
+	color: #160283;
+}
+
+.input-block input {
+	margin-bottom: 10px;
+	padding: 10px;
+	width: 100%;
+	border-radius: 5px;
+	border: 1px solid #160283;
+}
+
+.modal-buttons button {
+	display: inline;
+	height: 30px;
+	width: 100px;
+	padding: 10px 20px;
+	background-color: #160283;
+	color: #fff;
+	text-decoration: none;
+	border-radius: 5px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	margin: 10px auto;
+}
+
+.modal-buttons button:hover {
+	background-color: #f7f5f5;
+	color: #160283;
+}
+
+.sign-up {
+	text-align: center;
+}
+
+.sign-up a {
+	color:  #f7f5f5;
+}
+
+.sign-up a:hover {
+	color: #f7f5f5;
+}
+</style>
+</head>
+
+<body id="home">
+	<div class="showcase">
+		<nav id="navbar">
+			<a href="/" class="brand-left">CNBank</a>
+			<ul class="menu">
+				<li class="listitem"><a href="/">Home</a></li>
+				<li class="listitem"><a href="/aboutus">About Us</a></li>
+				<li class="listitem"><a href="/contact">Contact</a></li>
+				<li class="listitem"><a href="/login">Login</a></li>
+				<li class="listitem"><a href="/signup">Sign Up</a></li>
+			</ul>
+		</nav>
+		<h3 class="title">Welcome Back!</h3>
+		<pre id="errmsg" style="display:none;" th:if="${errorMessage}" th:text="${errorMessage}"></pre>
+		<div class="input-block">
+			<form th:action="@{/customerpage}" method="post">
+				<label for="email" class="input-label">Email</label> <input
+					type="email" name="cmail" id="email" placeholder="Enter Your Email"
+					required> <label for="password" class="input-label">Password</label>
+				<input type="password" name="cpass" id="password"
+					placeholder="Enter Your Password" required>
+		</div>
+
+		<div class="modal-buttons">
+			<button type="submit">Login</button>
+		</div>
+		</form>
+		<p class="sign-up">
+			Don't have an account? <a href="/signup">Sign up now</a>
+		</p>
+
+	</div>
+	<script>
+                	if(document.getElementById("errmsg")){
+                		alert(document.getElementById("errmsg").innerHTML)
+                	}
+                	
+                
+                </script>
+</body>
+
+</html>
